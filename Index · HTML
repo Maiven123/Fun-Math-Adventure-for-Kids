@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Math Magic Land 🌈</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="stars" id="stars"></div>
+<div class="confetti-wrap" id="confetti"></div>
+<div class="score-badge" id="scoreBadge">⭐ <span id="scoreDisplay">0</span></div>
+
+<div id="app">
+  <div class="header" id="mainHeader">
+    <h1>🌈 Math Magic Land</h1>
+    <div class="subtitle">Learn numbers the fun way!</div>
+  </div>
+
+  <div class="progress-wrap hidden" id="progressWrap">
+    <div class="progress-label">
+      <span id="progressLabel">Question 1 of 10</span>
+      <span id="progressPercent">0%</span>
+    </div>
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill" id="progressFill" style="width:0%"></div>
+    </div>
+  </div>
+
+  <div class="start-card" id="startScreen">
+    <div class="start-emojis">🍎🐻🌟</div>
+    <div class="start-title">Math Magic Land</div>
+    <div class="start-desc">
+      Can you count fruits 🍎, add animals 🐶,<br>
+      and solve fun puzzles? Let's find out!
+    </div>
+    <div class="start-features">
+      <div class="feature-chip">🔢 10 Questions</div>
+      <div class="feature-chip">🎉 Fun Prizes</div>
+      <div class="feature-chip">⭐ Score Points</div>
+    </div>
+    <button class="start-btn" onclick="startGame()">Let's Play! 🚀</button>
+  </div>
+
+  <div class="card hidden" id="questionCard">
+    <div class="question-num" id="questionNum">Question 1 of 10</div>
+    <div class="question-text" id="questionText"></div>
+    <div class="emoji-display" id="emojiDisplay"></div>
+    <div class="answers" id="answers"></div>
+    <div class="feedback" id="feedback"></div>
+  </div>
+
+  <button class="next-btn hidden" id="nextBtn" onclick="nextQuestion()" disabled>
+    Next Question →
+  </button>
+
+  <div class="results-card hidden" id="resultsCard">
+    <span class="results-trophy" id="resultsTrophy">🏆</span>
+    <div class="results-title" id="resultsTitle">Amazing!</div>
+    <div class="results-message" id="resultsMessage"></div>
+    <div class="score-display">
+      <div class="score-num" id="finalScore">0/10</div>
+      <div class="score-label">YOUR SCORE</div>
+    </div>
+    <div class="stars-row" id="starsRow"></div>
+    <button class="restart-btn" onclick="restartGame()">Play Again! 🔄</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
